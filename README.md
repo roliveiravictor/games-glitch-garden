@@ -33,10 +33,10 @@ Play: https://dl.dropboxusercontent.com/s/4re0jcqznx7u6pz/Glitch%20Garden.html -
 
 ### Prints ###
 
-   ![ls1.png](https://bitbucket.org/repo/5r7aqn/images/4063762991-ls1.png)
+   ![glitch1.jpg](https://bitbucket.org/repo/RqpGRk/images/336663763-glitch1.jpg)
 
 
-   ![ls2.png](https://bitbucket.org/repo/5r7aqn/images/2903925878-ls2.png)
+   ![glitch2.jpg](https://bitbucket.org/repo/RqpGRk/images/3847630999-glitch2.jpg)
 
 
-   ![ls3.png](https://bitbucket.org/repo/5r7aqn/images/1364585647-ls3.png)
+   ![glitch3.jpg](https://bitbucket.org/repo/RqpGRk/images/3750587286-glitch3.jpg)
