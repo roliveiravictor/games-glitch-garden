@@ -41,28 +41,30 @@ public class DefenderSpawner : MonoBehaviour {
         Vector2     rawPos   = CalculateWorldPoint();
         Vector2     spawnPos = SnapToGrid(rawPos);
 
-        int defenderCost    = Button.selectedDefender.GetComponent<Defender>().starCost;
-        bool isInstantiable = starDisplay.UseStars(defenderCost) == StarDisplay.Status.SUCCESS;
+        if(defender)
+        {
+            int defenderCost = Button.selectedDefender.GetComponent<Defender>().starCost;
+            bool isInstantiable = starDisplay.UseStars(defenderCost) == StarDisplay.Status.SUCCESS;
 
-        //Check if has enough stars to afford defender
-        if (isInstantiable)
-        {
-            SpawnDefender(spawnPos, defender);
-        }
-        else
-        {
-            //Prevent from spawning different star particles (effect of not enough stars) - instantiate just one and change its position when needed
-            if (!starFail)
+            //Check if has enough stars to afford defender
+            if (isInstantiable)
             {
-                starFail = Instantiate(starsEffect, spawnPos, Quaternion.identity) as GameObject;
+                SpawnDefender(spawnPos, defender);
             }
             else
             {
-                starFail.transform.position = spawnPos;
-                starFail.GetComponent<ParticleSystem>().Play();
+                //Prevent from spawning different star particles (effect of not enough stars) - instantiate just one and change its position when needed
+                if (!starFail)
+                {
+                    starFail = Instantiate(starsEffect, spawnPos, Quaternion.identity) as GameObject;
+                }
+                else
+                {
+                    starFail.transform.position = spawnPos;
+                    starFail.GetComponent<ParticleSystem>().Play();
+                }
             }
-        }
-            
+        }    
     }
 
     void SpawnDefender(Vector2 spawnPos, GameObject defender)

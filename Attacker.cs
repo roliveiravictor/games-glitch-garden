@@ -20,7 +20,7 @@ public class Attacker : MonoBehaviour {
 
     //Short information displayed on unity for designers
     [Tooltip ("Average number of seconds between appearances")]
-    public float       seenEverySecond;
+    public float        seenEverySecond;
 
     private float 		currentSpeed;       
 	private GameObject	currentTarget;
